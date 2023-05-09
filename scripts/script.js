@@ -6,3 +6,5 @@ function converterFunction() {
     console.log(textArea.value);
   }
 }
+
+// github text
