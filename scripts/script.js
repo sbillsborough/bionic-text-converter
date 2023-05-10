@@ -1,8 +1,19 @@
+const textArea = document.getElementById("textArea");
+
+let textAreaContent = "";
+
+console.log(textAreaContent);
+
 function converterFunction() {
-  const textArea = document.getElementById("textArea");
   if (!textArea.value) {
     console.log("Nothing present");
   } else {
-    console.log(textArea.value);
+    textAreaContent = textArea.value;
+    console.log(textAreaContent);
   }
+  logTextArea();
+}
+
+function logTextArea() {
+  console.log(textAreaContent);
 }
