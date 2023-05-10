@@ -2,18 +2,15 @@ const textArea = document.getElementById("textArea");
 
 let textAreaContent = "";
 
-console.log(textAreaContent);
-
-function converterFunction() {
+function storeTextArea() {
   if (!textArea.value) {
     console.log("Nothing present");
   } else {
     textAreaContent = textArea.value;
-    console.log(textAreaContent);
+    convertTextArea();
   }
-  logTextArea();
 }
 
-function logTextArea() {
+function convertTextArea() {
   console.log(textAreaContent);
 }
