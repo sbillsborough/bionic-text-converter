@@ -16,8 +16,9 @@ function convertTextArea() {
   newWord = [];
   textAreaContent.split(" ").forEach((word) => {
     if (word.length > 2) {
+      word = "<span>" + word + "</span>";
       newWord += word + " ";
-      convertedText.innerText = newWord;
+      convertedText.innerHTML = newWord;
     }
   });
 }
