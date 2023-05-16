@@ -1,5 +1,5 @@
 const textArea = document.getElementById("textArea");
-var convertedText = document.querySelector(".result-container");
+const convertedText = document.querySelector(".result-container");
 
 let textAreaContent = "";
 
@@ -14,5 +14,7 @@ function storeTextArea() {
 
 function convertTextArea() {
   console.log(textAreaContent);
-  convertedText.innerText = textAreaContent;
+  // convertedText.innerText = textAreaContent;
+  let splitTextAreaContent = textAreaContent.split(" ");
+  console.log(splitTextAreaContent);
 }
