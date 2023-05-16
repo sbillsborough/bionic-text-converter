@@ -12,9 +12,19 @@ function storeTextArea() {
   }
 }
 
+var splitTextAreaContent = [];
+
+function addSpan(item) {
+  splitTextAreaContent += item + " ";
+  console.log(splitTextAreaContent);
+  convertedText.innerText = splitTextAreaContent;
+}
+
 function convertTextArea() {
   console.log(textAreaContent);
   // convertedText.innerText = textAreaContent;
   let splitTextAreaContent = textAreaContent.split(" ");
   console.log(splitTextAreaContent);
+
+  splitTextAreaContent.forEach(addSpan);
 }
