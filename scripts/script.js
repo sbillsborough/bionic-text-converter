@@ -12,20 +12,12 @@ function storeTextArea() {
   }
 }
 
-var splitTextAreaContent = [];
-
-function addSpan(item) {
-  splitTextAreaContent += item + " ";
-  console.log(splitTextAreaContent);
-  console.log(item + " item log");
-  convertedText.innerText = splitTextAreaContent;
-}
-
 function convertTextArea() {
-  console.log(textAreaContent);
-  // convertedText.innerText = textAreaContent;
-  let splitTextAreaContent = textAreaContent.split(" ");
-  console.log(splitTextAreaContent);
-
-  splitTextAreaContent.forEach(addSpan);
+  newWord = [];
+  textAreaContent.split(" ").forEach((word) => {
+    if (word.length > 2) {
+      newWord += word + " ";
+      convertedText.innerText = newWord;
+    }
+  });
 }
