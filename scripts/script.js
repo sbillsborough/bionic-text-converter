@@ -13,12 +13,12 @@ function storeTextArea() {
 }
 
 function convertTextArea() {
-  let newWord = [];
+  let convertedWordsArray = [];
   textAreaContent.split(" ").forEach((word) => {
     if (word.length > 2) {
       word = "<span>" + word + "</span>";
-      newWord += word + " ";
-      convertedText.innerHTML = newWord;
+      convertedWordsArray += word + " ";
+      convertedText.innerHTML = convertedWordsArray;
     }
   });
 }
