@@ -17,6 +17,7 @@ var splitTextAreaContent = [];
 function addSpan(item) {
   splitTextAreaContent += item + " ";
   console.log(splitTextAreaContent);
+  console.log(item + " item log");
   convertedText.innerText = splitTextAreaContent;
 }
 
