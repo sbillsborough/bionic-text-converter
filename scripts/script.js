@@ -16,7 +16,7 @@ function convertTextArea() {
   let convertedWordsArray = [];
   textAreaContent.split(" ").forEach((word) => {
     if (word.length > 2) {
-      word = `<span class="bold"> ${word} </span>`;
+      word = `<span> ${word} </span>`;
       convertedWordsArray += word + " ";
       convertedText.innerHTML = convertedWordsArray;
     }
