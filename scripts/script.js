@@ -15,8 +15,9 @@ function storeTextArea() {
 function convertTextArea() {
   let convertedWordsArray = [];
   textAreaContent.split(" ").forEach((word) => {
-    if (word.length > 2) {
-      word = `<span> ${word} </span>`;
+    if (word.length > 4) {
+      console.log(word.split(""));
+      // word = `<span> ${word} </span>`;
       convertedWordsArray += word + " ";
       convertedText.innerHTML = convertedWordsArray;
     }
