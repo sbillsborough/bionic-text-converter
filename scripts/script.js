@@ -20,7 +20,7 @@ function convertTextArea() {
       console.log(splitWord);
       for (let index = 0; index < splitWord.length / 2; index++) {
         let boldLetters = [splitWord[index]];
-        console.log(`<span>${boldLetters.join("")}</span>`);
+        console.log(`<span>${boldLetters}</span>`);
       }
 
       // word = `<span> ${word} </span>`;
