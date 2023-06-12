@@ -12,11 +12,6 @@ function storeTextArea() {
   }
 }
 
-function boldString(word, subword) {
-  var strRegExp = new RegExp(subword, "g");
-  return word.replace(strRegExp, "<span>" + subword + "</span>");
-}
-
 function convertTextArea() {
   let convertedWordsArray = [];
   textAreaContent.split(" ").forEach((word) => {
