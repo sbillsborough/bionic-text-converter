@@ -23,15 +23,20 @@ function convertTextArea() {
     if (word) {
       convertedWordsArray += word + " ";
       convertedText.innerHTML = convertedWordsArray;
-      //Splits the words then logs them to the console
-      // let splitWord = word.split("");
-      // console.log(splitWord);
-      // for (let index = 0; index < splitWord.length / 2; index++) {
-      //   let boldLetters = [splitWord[index]];
-      //   console.log(`<span>${boldLetters}</span>`);
-      // }
+      // Splits the words then logs them to the console
+      let splitWord = word.split("");
+      let secondHalfOfWord = splitWord
+        .slice(Math.ceil(splitWord.length / 2))
+        .join("")
+        .trim();
+      console.log(splitWord);
+      console.log(secondHalfOfWord);
+      for (let index = 0; index < splitWord.length / 2; index++) {
+        let boldLetters = [splitWord[index]];
+        console.log(`<span>${boldLetters}</span>`);
+      }
 
-      // word = `<span> ${word} </span>`;
+      word = `<span> ${word} </span>`;
     }
   });
 }
