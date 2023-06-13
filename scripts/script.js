@@ -32,7 +32,7 @@ function convertTextArea() {
       let spanAddedToFirstHalf = `<span>${firstHalfOfWord}</span>`;
       console.log(spanAddedToFirstHalf);
 
-      secondHalfOfWord = splitWord
+      let secondHalfOfWord = splitWord
         .slice(Math.ceil(splitWord.length / 2))
         .join("")
         .trim();
