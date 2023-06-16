@@ -28,7 +28,7 @@ function convertTextArea() {
         .trim();
 
       let secondHalfOfWord = splitWord
-        .slice(Math.ceil(splitWord.length / 2))
+        .slice(splitWord.length / 2)
         .join("")
         .trim();
 
