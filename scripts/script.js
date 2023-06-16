@@ -22,15 +22,33 @@ function convertTextArea() {
       // Splits the words
       let splitWord = word.split("");
 
-      let firstHalfOfWord = splitWord
-        .slice(0, splitWord.length / 2)
-        .join("")
-        .trim();
+      let firstHalfOfWord = "";
 
-      let secondHalfOfWord = splitWord
-        .slice(splitWord.length / 2)
-        .join("")
-        .trim();
+      if (splitWord.length % 2 === 1 && splitWord.length <= 3) {
+        firstHalfOfWord = splitWord
+          .slice(0, Math.floor(splitWord.length / 2))
+          .join("")
+          .trim();
+      } else {
+        firstHalfOfWord = splitWord
+          .slice(0, Math.ceil(splitWord.length / 2))
+          .join("")
+          .trim();
+      }
+
+      let secondHalfOfWord = "";
+
+      if (splitWord.length % 2 === 1 && splitWord.length <= 3) {
+        secondHalfOfWord = splitWord
+          .slice(Math.floor(splitWord.length / 2))
+          .join("")
+          .trim();
+      } else {
+        secondHalfOfWord = splitWord
+          .slice(Math.ceil(splitWord.length / 2))
+          .join("")
+          .trim();
+      }
 
       console.log(firstHalfOfWord);
       console.log(secondHalfOfWord);
