@@ -16,6 +16,8 @@ h1 {
   background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  margin: 0 auto;
+  padding: 10px 0;
 }
 
 /* Custom Styling */
