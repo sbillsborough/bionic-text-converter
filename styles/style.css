@@ -1,11 +1,11 @@
-/* Style Resets */
+/* CSS RESETS */
 
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Main Styling */
+/* MAIN STYLE SECTION */
 
 span {
   font-weight: 600;
@@ -20,4 +20,24 @@ h1 {
   padding: 10px 0;
 }
 
-/* Custom Styling */
+/* CUSTOM STYLE SECTION */
+
+/* Text Area Section */
+
+.textarea-container {
+  text-align: center;
+}
+
+a {
+  width: 20vw;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  border-radius: 3px;
+  width: 90vw;
+}
