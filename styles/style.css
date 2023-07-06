@@ -48,6 +48,7 @@ a {
 textarea {
   border-radius: 3px;
   width: 90vw;
+  padding: 0 5px;
 }
 
 /* Result Container Section */
