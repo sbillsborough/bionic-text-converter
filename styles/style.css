@@ -8,9 +8,9 @@
 /* MAIN STYLE SECTION */
 
 body {
-  padding: 0 20px;
+  padding: 0 20px 30px 20px;
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 span {
@@ -31,8 +31,10 @@ h1 {
 /* Text Area Section */
 
 .textarea-container {
-  padding: 20px 0;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 10px;
 }
 
 a {
@@ -42,7 +44,7 @@ a {
   width: 20vw;
   border: 2px solid #000;
   border-radius: 5px;
-  margin: 0 auto;
+  margin: 15px 0 0 0;
   display: flex;
   justify-content: center;
 }
