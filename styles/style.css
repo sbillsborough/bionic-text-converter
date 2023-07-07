@@ -9,6 +9,8 @@
 
 body {
   padding: 0 20px;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
 }
 
 span {
