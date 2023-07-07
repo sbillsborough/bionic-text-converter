@@ -18,7 +18,6 @@ function convertTextArea() {
   textAreaContent.split(" ").forEach((word) => {
     if (word) {
       convertedWordsArray += word + " ";
-      // convertedText.innerHTML = convertedWordsArray;
       // Splits the words
       let splitWord = word.split("");
 
@@ -50,12 +49,8 @@ function convertTextArea() {
           .trim();
       }
 
-      console.log(firstHalfOfWord);
-      console.log(secondHalfOfWord);
-
       let rejoinedWord = `<span>${firstHalfOfWord}</span>${secondHalfOfWord}`;
 
-      console.log(`rejoined word = ${rejoinedWord}`);
       joinedPhrase += rejoinedWord + " ";
       convertedText.innerHTML = joinedPhrase;
     }
