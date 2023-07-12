@@ -18,6 +18,7 @@ function convertTextArea() {
   textAreaContent.split(" ").forEach((word) => {
     if (word) {
       convertedWordsArray += word + " ";
+
       // Splits the words
       let splitWord = word.split("");
 
