@@ -42,23 +42,21 @@ https://sbillsborough.github.io/bionic-text-converter/
 
 List of features ready and TODOs for future development
 
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Base functionality is there with the correct division on the length of the words eg. words with odd or even length.
 
 To-do list:
 
-- Wow improvement to be done 1
-- Wow improvement to be done 2
+- Ignore special characters/punctuation when converting a word.
+- Add emboldening to single letter words.
 
 ## Status
 
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is: _in progress_
 
 ## Inspiration
 
-Add here credits. Project inspired by..., based on...
+I saw that bionic reading was going viral on social media and decided to take on the challenge of writing my own converter.
 
 ## Contact
 
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by billsboroughscott@gmail.com - feel free to contact me!
