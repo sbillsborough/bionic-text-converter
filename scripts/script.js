@@ -5,7 +5,8 @@ let textAreaContent = "";
 
 function storeTextArea() {
   if (!textArea.value) {
-    console.log("Nothing present");
+    // console.log("Nothing present");
+    convertedText.innerHTML = `Please enter some text...`;
   } else {
     textAreaContent = textArea.value;
     convertTextArea();
