@@ -42,7 +42,7 @@ https://sbillsborough.github.io/bionic-text-converter/
 
 List of features ready and TODOs for future development
 
-- Base functionality is there with the correct division on the length of the words eg. words with odd or even length.
+- Base functionality is there with the correct division on the length of the words ie. words with odd or even length.
 
 To-do list:
 
