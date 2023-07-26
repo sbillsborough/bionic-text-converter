@@ -54,7 +54,7 @@ function convertTextArea() {
       let rejoinedWord = `<span>${firstHalfOfWord}</span>${secondHalfOfWord}`;
 
       joinedPhrase += rejoinedWord + " ";
-      convertedText.innerHTML = joinedPhrase;
+      convertedText.innerHTML = `<h2>Your converted text is:</h2>${joinedPhrase}`;
     }
   });
 }
