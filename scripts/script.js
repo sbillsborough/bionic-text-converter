@@ -1,11 +1,13 @@
+// Store the text area and results container to their associated variables
 const textArea = document.getElementById("textArea");
 const convertedText = document.querySelector(".result-container");
 
+// Text area content empty string
 let textAreaContent = "";
 
+//
 function storeTextArea() {
   if (!textArea.value) {
-    // console.log("Nothing present");
     convertedText.innerHTML = `Please enter some text...`;
   } else {
     textAreaContent = textArea.value;
