@@ -16,7 +16,6 @@ function storeTextArea() {
 }
 
 function convertTextArea() {
-  let convertedWordsArray = [];
   var joinedPhrase = "";
 
   // Regular expression to match any punctuation
@@ -25,48 +24,22 @@ function convertTextArea() {
   textAreaContent.split(" ").forEach((word) => {
     let wordParts = word.split(punctuationRegex); // Split word by punctuation
     let cleanedWord = wordParts.filter((part) => part.trim() !== ""); // Remove empty parts
+    console.log(cleanedWord);
 
-    if (word) {
-      convertedWordsArray += word + " ";
-
-      // Splits the words into an array containing the letters of the words
-      let splitWord = word.split("");
-
-      let firstHalfOfWord = "";
-
-      if (splitWord.length % 2 === 1 && splitWord.length <= 3) {
-        firstHalfOfWord = splitWord
-          .slice(0, Math.floor(splitWord.length / 2))
-          .join("")
-          .trim();
-      } else {
-        firstHalfOfWord = splitWord
-          .slice(0, Math.ceil(splitWord.length / 2))
-          .join("")
-          .trim();
-      }
-
-      let secondHalfOfWord = "";
-
-      if (splitWord.length % 2 === 1 && splitWord.length <= 3) {
-        secondHalfOfWord = splitWord
-          .slice(Math.floor(splitWord.length / 2))
-          .join("")
-          .trim();
-      } else {
-        secondHalfOfWord = splitWord
-          .slice(Math.ceil(splitWord.length / 2))
-          .join("")
-          .trim();
-      }
-
-      console.log(`bottom first half ${firstHalfOfWord}`);
-      console.log(`bottom second half ${secondHalfOfWord}`);
-
+    if (cleanedWord.length > 0) {
+      let splitWord = cleanedWord[0].split("");
+      let midIndex = Math.ceil(splitWord.length / 2);
+      let firstHalfOfWord = splitWord.slice(0, midIndex).join("").trim();
+      let secondHalfOfWord = splitWord.slice(midIndex).join("").trim();
       let rejoinedWord = `<span>${firstHalfOfWord}</span>${secondHalfOfWord}`;
 
+      // Reconstruct the word with punctuation if any
+      if (wordParts.length > 1) {
+        rejoinedWord += word.substring(cleanedWord[0].length);
+      }
       joinedPhrase += rejoinedWord + " ";
-      convertedText.innerHTML = `<h3>Your converted text is:</h3>${joinedPhrase}`;
     }
   });
+
+  convertedText.innerHTML = `<h3>Your converted text is:</h3>${joinedPhrase}`;
 }
