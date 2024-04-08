@@ -2,6 +2,15 @@
 const textArea = document.getElementById("textArea");
 const convertedText = document.querySelector(".result-container");
 
+// button Query Selector and Event Listener
+
+const button = document.querySelector(".button");
+
+button.addEventListener("click", function (e) {
+  e.preventDefault();
+  storeTextArea();
+});
+
 // Text area content empty string
 let textAreaContent = "";
 
@@ -29,6 +38,7 @@ function convertTextArea() {
     if (cleanedWord.length > 0) {
       let splitWord = cleanedWord[0].split("");
       let midIndex = Math.ceil(splitWord.length / 2);
+
       let firstHalfOfWord = splitWord.slice(0, midIndex).join("").trim();
       let secondHalfOfWord = splitWord.slice(midIndex).join("").trim();
       let rejoinedWord = `<span>${firstHalfOfWord}</span>${secondHalfOfWord}`;
