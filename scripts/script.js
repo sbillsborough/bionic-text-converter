@@ -4,7 +4,7 @@ const convertedText = document.querySelector(".result-container");
 
 // button Query Selector and Event Listener
 
-const button = document.querySelector(".button");
+const button = document.querySelector("button");
 
 button.addEventListener("click", function (e) {
   e.preventDefault();
