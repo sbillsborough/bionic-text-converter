@@ -37,8 +37,13 @@ function convertTextArea() {
 
     if (cleanedWord.length > 0) {
       let splitWord = cleanedWord[0].split("");
-      let midIndex = Math.ceil(splitWord.length / 2);
-
+      let midIndex = [];
+      if (splitWord.length === 3) {
+        midIndex = Math.floor(splitWord.length / 2);
+      } else {
+        midIndex = Math.ceil(splitWord.length / 2);
+      }
+      console.log(`midIndex: ${midIndex}`);
       let firstHalfOfWord = splitWord.slice(0, midIndex).join("").trim();
       let secondHalfOfWord = splitWord.slice(midIndex).join("").trim();
       let rejoinedWord = `<span>${firstHalfOfWord}</span>${secondHalfOfWord}`;
