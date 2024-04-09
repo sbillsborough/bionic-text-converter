@@ -33,7 +33,6 @@ function convertTextArea() {
   textAreaContent.split(" ").forEach((word) => {
     let wordParts = word.split(punctuationRegex); // Split word by punctuation
     let cleanedWord = wordParts.filter((part) => part.trim() !== ""); // Remove empty parts
-    console.log(cleanedWord);
 
     if (cleanedWord.length > 0) {
       let splitWord = cleanedWord[0].split("");
@@ -43,7 +42,7 @@ function convertTextArea() {
       } else {
         midIndex = Math.ceil(splitWord.length / 2);
       }
-      console.log(`midIndex: ${midIndex}`);
+
       let firstHalfOfWord = splitWord.slice(0, midIndex).join("").trim();
       let secondHalfOfWord = splitWord.slice(midIndex).join("").trim();
       let rejoinedWord = `<span>${firstHalfOfWord}</span>${secondHalfOfWord}`;
